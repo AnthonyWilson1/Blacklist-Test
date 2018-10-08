@@ -2,7 +2,6 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const sql = require('../models/user.js')
 const keys = require('../config/keys.js')
-let absoluteURI = "http://herokupath"
 
 passport.serializeUser((result, done) => {
     done(null, result[0].googleID);
@@ -19,7 +18,7 @@ passport.use(
     {
     clientID: keys.googleClientID,
     clientSecret: keys.googleClientSecret,
-    callbackURL: absoluteURI + '/auth/google/callback',
+    callbackURL: '/auth/google/callback',
     proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
