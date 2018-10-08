@@ -22,6 +22,7 @@ app.get(
     '/auth/google/callback', 
     passport.authenticate('google'),
     (req, res) => {
+        console.log('Entered Redirect')
         res.redirect('/dashboard')
     })
 }
