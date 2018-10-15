@@ -16,6 +16,7 @@ app.get('/api/productivity', (req, res) => {
     list.view(user).then( result => {
         var array = []
         var seven = result.filter((element) => {
+            console.log(element)
             var time = moment(element.created_at).format('MM-DD-YYYY')
             return time === day7 && element.complete === 1
         })
@@ -43,20 +44,13 @@ app.get('/api/productivity', (req, res) => {
             var time = moment(element.created_at).format('MM-DD-YYYY')
             return time === day1 && element.complete === 1
         })
-        // array.push([...seven])
-        // array.push([...six])
-        // array.push([...five])
-        // array.push([...four])
-        // array.push([...three])
-        // array.push([...two])
-        // array.push([...one])
-        array.push([seven])
-        array.push([six])
-        array.push([five])
-        array.push([four])
-        array.push([three])
-        array.push([two])
-        array.push([one])
+        array.push([...seven])
+        array.push([...six])
+        array.push([...five])
+        array.push([...four])
+        array.push([...three])
+        array.push([...two])
+        array.push([...one])
         res.send(array)
     })
 })
