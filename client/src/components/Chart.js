@@ -59,14 +59,13 @@ class Chart extends Component {
     axios.get('/api/productivity').then((result) => {
       // console.log(result.data[0].length)
       // console.log(copy.datasets[0].data[0])
-      copy.datasets[0].data[0] = result.data[0].length
-      copy.datasets[0].data[1] = result.data[1].length
-      copy.datasets[0].data[2] = result.data[2].length
+      copy.datasets[0].data[0] = result.data[6].length
+      copy.datasets[0].data[1] = result.data[5].length
+      copy.datasets[0].data[2] = result.data[4].length
       copy.datasets[0].data[3] = result.data[3].length
-      copy.datasets[0].data[4] = result.data[4].length
-      copy.datasets[0].data[5] = result.data[5].length
-      copy.datasets[0].data[6] = result.data[6].length
-
+      copy.datasets[0].data[4] = result.data[2].length
+      copy.datasets[0].data[5] = result.data[1].length
+      copy.datasets[0].data[6] = result.data[0].length
       this.setState({chartData: copy})
       })
 }
