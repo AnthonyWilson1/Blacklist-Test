@@ -15,6 +15,7 @@ app.get('/api/logout', (req,res) => {
 });
 
 app.get('/api/current_user', (req, res) => {
+    console.log(req.user)
     res.json(req.user);
 });
 

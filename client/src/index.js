@@ -4,7 +4,7 @@ import './components/index.css';
 import App from './components/App';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import registerServiceWorker from './registerServiceWorker';
+//import registerServiceWorker from './registerServiceWorker';
 
 //import {BrowserRouter} from 'react-router-dom';
 
